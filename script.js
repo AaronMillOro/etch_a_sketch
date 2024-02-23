@@ -21,9 +21,19 @@ function createGrid(nbPixels){
             pixel.style['height'] = Math.floor(sketch.offsetHeight/nbPixels)+'px'
             pixel.classList.add('pixel')
             pixel.addEventListener('mouseover', () => {
-                pixel.style['background-color'] = `rgb(${setRandomValue()}, ${setRandomValue()}, ${setRandomValue()})`
-                // for reseting the color after a delay
-                setTimeout(() => {pixel.style['background-color'] = '#e0dede'}, '450')
+                if(isNaN(pixel.style['background-color'])){
+                    const color = pixel.style['background-color']
+                    if (!color.includes('0.9')){
+                        let darkness = +color.split(', ')[3].slice(0,3)
+                        if (darkness < 1){ 
+                            darkness += 0.1
+                            const nextColor =  color.substring(0, color.length-4) + darkness.toFixed(1) + ')'
+                            pixel.style['background-color'] = nextColor
+                        }
+                    }
+                } else {
+                    pixel.style['background-color'] = `rgba(${setRandomValue()}, ${setRandomValue()}, ${setRandomValue()}, 0.1)`
+                }
             })
             sketch.appendChild(pixel)
         }

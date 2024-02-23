@@ -87,7 +87,6 @@ h1{
     border: 0.5px solid #efeeee;
 }
 
-
 @media (max-width: 768px){
     .container {
         width: 100vw;
