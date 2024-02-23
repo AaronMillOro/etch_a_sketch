@@ -1,7 +1,9 @@
 const sketch = document.getElementById('sketch')
 const btn = document.getElementById('new-grid')
-
 let initialGrid = 16
+
+window.onresize = () => { location.reload()}
+
 createGrid(initialGrid)
 
 btn.addEventListener('click', () => {
