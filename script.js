@@ -6,7 +6,7 @@ createGrid(initialGrid)
 
 btn.addEventListener('click', () => {
     do { 
-        initialGrid = prompt('hit a number (less than 64)')
+        initialGrid = prompt('hit a number (lower than 64)')
     } while (isNaN(initialGrid) || initialGrid > 64)
     resetGrid()
     createGrid(initialGrid)
