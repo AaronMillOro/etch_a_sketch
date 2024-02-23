@@ -2,7 +2,11 @@ const sketch = document.getElementById('sketch')
 const btn = document.getElementById('new-grid')
 let initialGrid = 16
 
-window.onresize = () => { location.reload()}
+window.onresize = () => {
+    const currentGrid = document.querySelectorAll('.pixel')
+    resetGrid()
+    createGrid(currentGrid.length ** 0.5)
+}
 
 createGrid(initialGrid)
 
