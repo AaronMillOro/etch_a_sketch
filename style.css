@@ -12,7 +12,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
     background-color: rgb(175, 175, 175);
 }
 
@@ -45,7 +44,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     background-color: rgb(202, 39, 39);
-    width: 70vw;
+    width: 100vw;
     padding: 15px 0;
     height: 85vh;
     border: 3px solid #000;
@@ -88,8 +87,8 @@ a:hover{
 
 #sketch {
     background-color: #e0dede;
-    width: 80vh;
-    height: 80vh;
+    width: 70vw;
+    height: 70vh;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -101,19 +100,4 @@ a:hover{
 
 .pixel {
     border: 0.5px solid #efeeee;
-}
-
-@media (max-width: 1224px){
-    
-    .container {
-        width: 100vw;
-        height: 86vh;
-    }
-
-    #sketch{
-        width: 70vw;
-        height: 70vh;
-        padding: 0;
-        margin: 0;
-    }
 }
