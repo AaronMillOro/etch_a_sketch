@@ -8,7 +8,7 @@ A browser version of something between a sketchpad and an Etch-A-Sketch.
 
 - Each section change color when hovering over them, leaving a (pixelated) trail through the grid like a pen would. 
 
-- A button on top of the screen will asking for the number of squares per side of a new grid. Once entered, the existing grid is removed and a new grid will be generated in the same total space as before. The limit for the user input is set to a maximum of 100.
+- A button on top of the screen will asking for the number of squares per side of a new grid. Once entered, the existing grid is removed and a new grid will be generated in the same total space as before. The limit for the user input is set to a maximum of 64.
 
 - Each interaction will randomize the square’s RGB value.
 
