@@ -8,8 +8,8 @@ createGrid(initialGrid)
 
 btn.addEventListener('click', () => {
     do { 
-        initialGrid = prompt('hit a number (lower than 64)')
-    } while (isNaN(initialGrid) || initialGrid > 64)
+        initialGrid = prompt('Hit a number (from 1 to 100)')
+    } while (isNaN(initialGrid) || initialGrid > 100 || initialGrid <= 0)
     resetGrid()
     createGrid(initialGrid)
 })
@@ -50,7 +50,6 @@ function resetGrid(){
     }
 }
 
-// random value between 0 to 255
 function setRandomValue(){
     return Math.floor(Math.random() * 255)
 }

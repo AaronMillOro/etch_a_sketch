@@ -23,6 +23,22 @@ h1{
     margin: 0;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    color: #000;
+}
+
+a{
+    color: rgb(202, 39, 39);
+}
+
+a:hover{
+    color: rgb(0, 126, 67)
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -95,7 +111,7 @@ h1{
     }
 
     #sketch{
-        width: 77vw;
+        width: 70vw;
         height: 70vh;
         padding: 0;
         margin: 0;
