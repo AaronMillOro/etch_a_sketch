@@ -22,6 +22,7 @@ function createGrid(nbPixels){
             pixel.style['width'] = Math.floor(sketch.offsetWidth/nbPixels)+'px'
             pixel.style['height'] = Math.floor(sketch.offsetHeight/nbPixels)+'px'
             pixel.classList.add('pixel')
+            pixel.style['cursor'] = 'grab'
             pixel.addEventListener('mouseover', () => {
                 if(isNaN(pixel.style['background-color'])){
                     const color = pixel.style['background-color']
