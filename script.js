@@ -42,7 +42,7 @@ function createPixel(nbPixels){
     pixel.addEventListener('mouseover', () => {
         if(isNaN(pixel.style['background-color'])){
             const color = pixel.style['background-color']
-            intensityColorDarkness(color)
+            pixel.style['background-color'] = intensityColorDarkness(color)
         } else {
             pixel.style['background-color'] = `rgba(${setRandomValue()}, ${setRandomValue()}, ${setRandomValue()}, 0.1)`
         }
@@ -55,8 +55,7 @@ function intensityColorDarkness(color){
         let darkness = +color.split(', ')[3].slice(0,3)
         if (darkness < 1){ 
             darkness += 0.1
-            const nextColor =  color.substring(0, color.length-4) + darkness.toFixed(1) + ')'
-            pixel.style['background-color'] = nextColor
+            return color.substring(0, color.length-4) + darkness.toFixed(1) + ')'
         }
     }
 }
