@@ -20,11 +20,15 @@ btn.addEventListener('click', () => {
 
 function createGrid(nbPixels){
     const fragment =  document.createDocumentFragment()
+    let pixelSize = createPixel(nbPixels)
     // to get a squared grid
     for (let y = 1; y <= nbPixels * nbPixels; y++){
         const pixel = createPixel(nbPixels)
         fragment.appendChild(pixel)
     }
+    // re-size sketch zone to avoid emptiness 
+    sketch.style.width = (pixelSize.width * nbPixels) + 'px'
+    sketch.style.height = (pixelSize.height * nbPixels) + 'px'
     sketch.appendChild(fragment)
 }
 
@@ -35,8 +39,8 @@ function setRandomValue(){
 function createPixel(nbPixels){
     // the number of pixel is to claculate the width and height in function of the  size of the sketch zone
     const pixel = document.createElement('div')
-    pixel.style['width'] = Math.floor(sketch.offsetWidth/nbPixels)+'px'
-    pixel.style['height'] = Math.floor(sketch.offsetHeight/nbPixels)+'px'
+    pixel.style['width'] = Math.floor(sketch.offsetWidth/nbPixels) + 'px'
+    pixel.style['height'] = Math.floor(sketch.offsetHeight/nbPixels) + 'px'
     pixel.classList.add('pixel')
     pixel.style['cursor'] = 'grab'
     pixel.addEventListener('mouseover', () => {
